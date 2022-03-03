@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background"
+        tools:context=".activity.FormActivity">
+
+        <TextView
+            android:id="@+id/tvTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="92dp"
+            android:fontFamily="@font/bebas_neue"
+            android:text="@string/tv_titulo"
+            android:textColor="#000000"
+            android:textSize="25sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvSubtitlo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/tv_subtitulo"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.084"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitulo" />
+
+        <!-- Formulário -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginRight="10dp"
+            android:paddingLeft="30dp"
+            android:paddingTop="60dp"
+            android:paddingRight="30dp"
+            android:paddingBottom="30dp"
+            android:background="@drawable/border_radius"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSubtitlo">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/tv_salarioBase"
+                android:textColor="#3E3E3E"
+                android:textSize="16sp" />
+
+            <!-- INPUT - salario -->
+            <EditText
+                android:paddingLeft="7dp"
+                android:id="@+id/etxSalario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="#F2F2F2"
+                android:fontFamily="sans-serif-medium"
+                android:inputType="numberDecimal"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/tv_numeroDependentes"
+                android:textColor="#FF3E3E3E"
+                android:textSize="16sp" />
+
+            <!-- INPUT - numero de dependentes -->
+            <EditText
+                android:paddingLeft="7dp"
+                android:id="@+id/etDependentes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="#F2F2F2"
+                android:fontFamily="sans-serif-medium"
+                android:inputType="numberDecimal"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/tv_planoSaude"
+                android:textColor="#FF3E3E3E"
+                android:textSize="16sp" />
+
+            <!-- INPUT - plano de saude -->
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/tv_valeRef"
+                android:textColor="#FF3E3E3E"
+                android:textSize="16sp" />
+
+            <!-- INPUTS - vale refeição -->
+            <RadioGroup
+                android:id="@+id/radGpValeRefeicao"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/simValeRefe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-black"
+                    android:text="@string/rbtn_sim"
+                    android:textColor="#FF3E3E3E" />
+
+                <RadioButton
+                    android:id="@+id/naoValeRefe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-black"
+                    android:text="@string/rbtn_nao"
+                    android:textColor="#FF3E3E3E" />
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10sp"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/tv_valeAlimen"
+                android:textColor="#FF3E3E3E"
+                android:textSize="16sp" />
+
+            <!-- INPUTS - vale alimentação -->
+            <RadioGroup
+                android:id="@+id/radGpValeAli"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/simValeAlimen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-black"
+                    android:text="@string/rbtn_sim"
+                    android:textColor="#FF3E3E3E" />
+
+                <RadioButton
+                    android:id="@+id/naoValeAlimen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-black"
+                    android:text="@string/rbtn_nao"
+                    android:textColor="#FF3E3E3E" />
+            </RadioGroup>
+
+            <!-- LABEL - vale transporte -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10sp"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/tv_valeTransp"
+                android:textColor="#FF3E3E3E"
+                android:textSize="16sp" />
+
+            <!-- INPUTS - vale transporte -->
+            <RadioGroup
+                android:id="@+id/radGpValeTransp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp">
+
+                <RadioButton
+                    android:id="@+id/simValeTransp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-black"
+                    android:text="@string/rbtn_sim"
+                    android:textColor="#FF3E3E3E" />
+
+                <RadioButton
+                    android:id="@+id/naoValeTransp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-black"
+                    android:text="@string/rbtn_nao"
+                    android:textColor="#FF3E3E3E" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_radius"
+                android:fontFamily="@font/bebas_neue"
+                android:text="@string/btn_calcular"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

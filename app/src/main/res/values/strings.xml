@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Folha de Pagamento</string>
+    <string name="tv_titulo">Bem Vindo</string>
+    <string name="tv_subtitulo">Insira seus dados</string>
+    <string name="tv_salarioBase">Salario Base</string>
+    <string name="tv_numeroDependentes">Numero de Dependentes</string>
+    <string name="tv_planoSaude">Plano de Saúde</string>
+    <string name="tv_valeRef">Vale Refeição</string>
+    <string name="rbtn_sim">Sim</string>
+    <string name="rbtn_nao">Não</string>
+    <string name="tv_valeAlimen">Vale Alimentação</string>
+    <string name="btn_calcular">Enviar</string>
+    <string name="tv_valeTransp">Vale Transporte</string>
+    <string name="tv_descontos">Descontos</string>
+    <string name="tv_salarioBruto">Salário Bruto</string>
+    <string name="tv_titulo2">Sua folha de pagamento na palma da mão</string>
+    <string name="tv_nome">Nome</string>
+    <string name="btn_comece">comece</string>
+    <string name="tv_salarioLiqui">Salário Líquido</string>
+    <string name="tv_inss">INSS</string>
+    <string name="tv_cifrao">R$</string>
+    <string name="tv_alterarDados">Alterar dados</string>
+    <string name="tv_novaConsulta">Nova Consulta</string>
+    <string name="tv_irrf">IRRF</string>
+    <string name="tv_porcentagem">Porcentagem</string>
+
+    <string-array name="items">
+        <item>Standard</item>
+        <item>Básico</item>
+        <item>Super</item>
+        <item>Master</item>
+    </string-array>
+
+</resources>
